@@ -1,0 +1,157 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.instagram"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/Admin/Desktop/Instagram/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/Admin/Desktop/Instagram/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" /> <!-- Added permissions -->
+12-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.CAMERA" /> <!-- Optional permissions -->
+13-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:6:5-65
+13-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:6:22-62
+14    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+14-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:9:5-71
+14-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:9:22-68
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+15-->[com.facebook.flipper:flipper:0.125.0] /Users/Admin/.gradle/caches/transforms-3/b2ec3232205e095c09543a31d56ae642/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
+15-->[com.facebook.flipper:flipper:0.125.0] /Users/Admin/.gradle/caches/transforms-3/b2ec3232205e095c09543a31d56ae642/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+16-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-80
+17-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-77
+18
+19    <queries>
+19-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:5-20:15
+20
+21        <!-- Query open documents -->
+22        <intent>
+22-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:9-19:18
+23            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+23-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-79
+23-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:21-76
+24        </intent>
+25    </queries>
+26
+27    <uses-feature
+27-->[com.google.android:cameraview:1.0.0] /Users/Admin/.gradle/caches/transforms-3/7fb7d0ccd2385d31f0b2dcc14d8f092c/transformed/jetified-cameraview-1.0.0/AndroidManifest.xml:25:5-27:36
+28        android:name="android.hardware.camera"
+28-->[com.google.android:cameraview:1.0.0] /Users/Admin/.gradle/caches/transforms-3/7fb7d0ccd2385d31f0b2dcc14d8f092c/transformed/jetified-cameraview-1.0.0/AndroidManifest.xml:26:9-47
+29        android:required="false" />
+29-->[com.google.android:cameraview:1.0.0] /Users/Admin/.gradle/caches/transforms-3/7fb7d0ccd2385d31f0b2dcc14d8f092c/transformed/jetified-cameraview-1.0.0/AndroidManifest.xml:27:9-33
+30    <uses-feature
+30-->[com.google.android:cameraview:1.0.0] /Users/Admin/.gradle/caches/transforms-3/7fb7d0ccd2385d31f0b2dcc14d8f092c/transformed/jetified-cameraview-1.0.0/AndroidManifest.xml:28:5-30:36
+31        android:name="android.hardware.camera.autofocus"
+31-->[com.google.android:cameraview:1.0.0] /Users/Admin/.gradle/caches/transforms-3/7fb7d0ccd2385d31f0b2dcc14d8f092c/transformed/jetified-cameraview-1.0.0/AndroidManifest.xml:29:9-57
+32        android:required="false" />
+32-->[com.google.android:cameraview:1.0.0] /Users/Admin/.gradle/caches/transforms-3/7fb7d0ccd2385d31f0b2dcc14d8f092c/transformed/jetified-cameraview-1.0.0/AndroidManifest.xml:30:9-33
+33
+34    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+34-->[com.android.installreferrer:installreferrer:1.0] /Users/Admin/.gradle/caches/transforms-3/20fcbdc58737c867f1cda60c44c3ddda/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+34-->[com.android.installreferrer:installreferrer:1.0] /Users/Admin/.gradle/caches/transforms-3/20fcbdc58737c867f1cda60c44c3ddda/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
+35
+36    <application
+36-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:11:5-30:19
+37        android:name="com.instagram.MainApplication"
+37-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:12:7-38
+38        android:allowBackup="false"
+38-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:16:7-34
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.5.0] /Users/Admin/.gradle/caches/transforms-3/f382564408e8806e991bcb7c984abfd6/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+40        android:debuggable="true"
+41        android:icon="@mipmap/ic_launcher"
+41-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:14:7-41
+42        android:label="@string/app_name"
+42-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:13:7-39
+43        android:roundIcon="@mipmap/ic_launcher_round"
+43-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:15:7-52
+44        android:testOnly="true"
+45        android:theme="@style/AppTheme"
+45-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:17:7-38
+46        android:usesCleartextTraffic="true" >
+46-->/Users/Admin/Desktop/Instagram/android/app/src/debug/AndroidManifest.xml:8:9-44
+47        <activity
+47-->/Users/Admin/Desktop/Instagram/android/app/src/debug/AndroidManifest.xml:11:9-111
+48            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+48-->/Users/Admin/Desktop/Instagram/android/app/src/debug/AndroidManifest.xml:11:19-83
+49            android:exported="false" />
+49-->/Users/Admin/Desktop/Instagram/android/app/src/debug/AndroidManifest.xml:11:84-108
+50        <activity
+50-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:18:7-29:18
+51            android:name="com.instagram.MainActivity"
+51-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:19:9-37
+52            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+52-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:21:9-118
+53            android:exported="true"
+53-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:24:9-32
+54            android:label="@string/app_name"
+54-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:20:9-41
+55            android:launchMode="singleTask"
+55-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:22:9-40
+56            android:windowSoftInputMode="adjustResize" >
+56-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:23:9-51
+57            <intent-filter>
+57-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:25:9-28:25
+58                <action android:name="android.intent.action.MAIN" />
+58-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:26:13-65
+58-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:26:21-62
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:27:13-73
+60-->/Users/Admin/Desktop/Instagram/android/app/src/main/AndroidManifest.xml:27:23-70
+61            </intent-filter>
+62        </activity>
+63
+64        <provider
+64-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+65            android:name="com.imagepicker.ImagePickerProvider"
+65-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+66            android:authorities="com.instagram.imagepickerprovider"
+66-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-71
+67            android:exported="false"
+67-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+68            android:grantUriPermissions="true" >
+68-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+69            <meta-data
+69-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+70                android:name="android.support.FILE_PROVIDER_PATHS"
+70-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+71                android:resource="@xml/imagepicker_provider_paths" />
+71-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+72        </provider>
+73        <provider
+73-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-32:20
+74            android:name="expo.modules.filesystem.FileSystemFileProvider"
+74-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-74
+75            android:authorities="com.instagram.FileSystemFileProvider"
+75-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-74
+76            android:exported="false"
+76-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-37
+77            android:grantUriPermissions="true" >
+77-->[:expo-file-system] /Users/Admin/Desktop/Instagram/node_modules/expo-file-system/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-47
+78            <meta-data
+78-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+79                android:name="android.support.FILE_PROVIDER_PATHS"
+79-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+80                android:resource="@xml/file_system_provider_paths" />
+80-->[:react-native-image-picker] /Users/Admin/Desktop/Instagram/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+81        </provider>
+82
+83        <meta-data
+83-->[:expo-modules-core] /Users/Admin/Desktop/Instagram/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:89
+84            android:name="org.unimodules.core.AppLoader#react-native-headless"
+84-->[:expo-modules-core] /Users/Admin/Desktop/Instagram/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-79
+85            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+85-->[:expo-modules-core] /Users/Admin/Desktop/Instagram/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-86
+86    </application>
+87
+88</manifest>

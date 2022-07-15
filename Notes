@@ -1,0 +1,189 @@
+======== Instagram =============
+
+
+npx react-native start
+
+npx react-native run-ios
+
+
+- Installation of dependencies:
+
+Initialize the project
+npx react-native init Instagram --template react-native-template-typescript // Create new Project
+
+
+ // Replace the babel configuration file with this:
+babel.config.js
+
+module.exports = {
+ presets: [
+   [
+     'module:metro-react-native-babel-preset',
+     {useTransformReactJSXExperimental: true},
+   ],
+ ],
+ plugins: [
+   [
+     '@babel/plugin-transform-react-jsx',
+     {
+       runtime: 'automatic',
+     },
+   ],
+ ],
+};
+
+
+CLI Commands
+    start development server
+    npm or yarn start
+start a clean, fresh development server by resetting the cache
+    npm or yarn start -- --reset-cache
+
+Install Pods (macOS users only)
+    npx pod-install ios
+
+run the app on an android device/emulator
+run the app on an iOS device/simulator
+    Run instructions for Android:
+      • Have an Android emulator running (quickest way to get started), or a device connected.
+      • cd "/Users/Admin/Desktop/projects/Instagram" && npx react-native run-android
+
+    Run instructions for iOS:
+      • cd "/Users/Admin/Desktop/projects/Instagram" && npx react-native run-ios
+      - or -
+      • Open Instagram/ios/Instagram.xcworkspace in Xcode or run "xed -b ios"
+      • Hit the Run button
+
+
+vector ICons
+    npm or yarn add react-native-vector-icons
+    npm or yarn add  @types/react-native-vector-icons
+
+    React native vector icon github website
+    https://github.com/oblador/react-native-vector-icons#option-manually
+
+    All the beautiful vector Icon use website
+    https://oblador.github.io/react-native-vector-icons/
+
+    NB:
+    We have to configure IOS by copying the icon array inside of:
+    IOS => Your Application => info.plist => Paste right before closing the dictionary
+
+        <key>UIAppFonts</key>
+            <array>
+              <string>AntDesign.ttf</string>
+              <string>Entypo.ttf</string>
+              <string>EvilIcons.ttf</string>
+              <string>Feather.ttf</string>
+              <string>FontAwesome.ttf</string>
+              <string>FontAwesome5_Brands.ttf</string>
+              <string>FontAwesome5_Regular.ttf</string>
+              <string>FontAwesome5_Solid.ttf</string>
+              <string>Foundation.ttf</string>
+              <string>Ionicons.ttf</string>
+              <string>MaterialIcons.ttf</string>
+              <string>MaterialCommunityIcons.ttf</string>
+              <string>SimpleLineIcons.ttf</string>
+              <string>Octicons.ttf</string>
+              <string>Zocial.ttf</string>
+              <string>Fontisto.ttf</string>
+            </array>
+
+    Android:
+    Add this: apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+    Android => app => build.gradle
+
+    The image picker library for IOS in the plist info file
+     <key>NSPhotoLibraryUsageDescription</key>
+     <string>Photo library permission is needed to change the avatar</string>
+
+
+ Everything about Camera
+
+ IOS
+    Images picker and expo modules installation
+    npx install-expo-modules
+    expo install expo-camera
+
+
+  Add NSCameraUsageDescription and NSMicrophoneUsageDescription keys to your Info.plist:
+    <key>NSCameraUsageDescription</key>
+    <string>Allow $(PRODUCT_NAME) to use the camera</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow $(PRODUCT_NAME) to use the microphone</string>
+
+    install npx pod-install on mac os
+
+ Android => android => app = src =>main => manifest
+ <!-- Added permissions -->
+ <uses-permission android:name="android.permission.CAMERA" />
+ <!-- Optional permissions -->
+ <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+ add this maven bloc of code in your Android = > build.gradle
+        maven {
+            // expo-camera bundles a custom com.google.android:cameraview
+            url "$rootDir/../node_modules/expo-camera/android/maven"
+        }
+
+
+
+
+
+
+
+ Git Recap:
+
+  git init
+  git status
+  git add .
+
+  create a touch .gitignore file for file we don't want to keep tracking
+
+  git commit -m "Message"
+
+  create an origin for the repo
+  git push origin master
+
+
+  git pull to update the personal repo:
+
+  Branching:
+
+      git checkout main
+      git fetch origin
+      git reset --hard origin/main
+
+  Create
+    git checkout -b new-feature
+
+  Update
+    git status
+    git add <some-file>
+    git commit
+
+  Push
+    git push -u origin new-feature
+
+
+NB: In react native, if your data doesnt have any key, this is how to do it.
+in Flatlist
+<Flatlist keyExtractor={item => { return `post-${item.createAt}`}} />
+
+
+
+State: If the updated data depend on the previous data used: setIsliked(v => v)
+
+
+
+    import {View, Text} from 'react-native';
+
+    const Comment = () => {
+      return (
+        <View>
+          <Text>Comment</Text>
+        </View>
+      );
+    };
+
+    export default Comment;
