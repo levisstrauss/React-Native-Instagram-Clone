@@ -7,13 +7,15 @@ import {
   PostUploadScreen,
 } from './src/screens/index';
 
+
+
 const App = () => {
   return (
     <SafeAreaView style={styles.app}>
       {/*<HomeScreen />*/}
       {/*<CommentsScreen />*/}
       {/*<ProfileScreen />*/}
-      <EditProfileScreen />
+      {/*<EditProfileScreen />*/}
       {/*<PostUploadScreen />*/}
     </SafeAreaView>
   );

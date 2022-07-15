@@ -160,3 +160,21 @@ This project is an Instagram clone mobile application developed with React Nativ
     - git commit -m "Message"
     - git push origin master
     - git branch -M branch name 
+    - git pull => to fetch all the changes
+
+    Branching:
+
+    git checkout main
+    git fetch origin
+    git reset --hard origin/main
+    
+    Create
+    git checkout -b new-feature
+    
+    Update
+    git status
+    git add <some-file>
+    git commit
+    
+    Push
+    git push -u origin new-feature

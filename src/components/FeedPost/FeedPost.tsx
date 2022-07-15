@@ -119,7 +119,7 @@ const FeedPost = ({post, isVisible}: IFeedPost) => {
         {/*Post Comment*/}
         <Text>View all {post.nofComments} comments</Text>
         {post.comments.map(comment => (
-          <Comment key={comment.id} comment={comment} />
+          <Comment key={comment.id} comment={comment} includeDetails />
         ))}
 
         {/*Posted Date */}
