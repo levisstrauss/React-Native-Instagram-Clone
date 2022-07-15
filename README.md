@@ -178,3 +178,34 @@ This project is an Instagram clone mobile application developed with React Nativ
     
     Push
     git push -u origin new-feature
+
+
+================= Building the App ====================
+
+      - FeedPost
+      - Comment
+      - HomeScreen
+
+================= Tricks ====================
+
+      - Anytime we need to reuse something for more than one,
+        we definitly need to create a component for it.
+      
+     - State
+       - if you want to update the value of the state setState(true)
+       - if the update value depends of the existing one
+            setState( existingValue => !existingValue)
+          
+
+
+================= Templates ====================
+
+    import {View, Text} from 'react-native';
+    const Comment = () => {
+    return (
+    <View>
+    <Text>Hello</Text>
+    </View>
+    );
+    };
+    export default Comment;
