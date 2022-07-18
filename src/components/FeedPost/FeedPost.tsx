@@ -10,15 +10,29 @@ import Comment from '../Comment';
 import {IPost} from '../../types/models';
 import DoublePressable from "../DoublePressable";
 import Carousel from "../Carousel";
+import VideoPlayer from "../VideoPlayer";
+import {isVoidTypeAnnotation} from '@babel/types';
+import {useNavigation} from "@react-navigation/native";
 
 interface IFeedPost {
   post: IPost;
+  isVisible: boolean;
 }
 
-const FeedPost = ({post}: IFeedPost) => {
+const FeedPost = (props: IFeedPost) => {
 
+  const {post, isVisible = false} = props;
   const [isDescriptionExpanded, setDescriptionExpanded] = useState(false);
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(true);
+  const navigation = useNavigation();
+
+  const navigateToUser = () => {
+    navigation.navigate('UserProfile', {userId: post.user.id});
+  }
+
+  const navigateToComments = () => {
+  navigation.navigate('Comments', {postId: post.id});
+  }
 
   const toggleDescriptionExpanded = () => {
      setDescriptionExpanded(v => !v);
@@ -31,16 +45,25 @@ const FeedPost = ({post}: IFeedPost) => {
   let content = null;
   if (post.image){
     content = (
-      <Image
-        source={{
-          uri: post.image,
-        }}
-        style={styles.image}
-      />
+      <DoublePressable onDoublePress={toggleLike}>
+        <Image
+          source={{
+            uri: post.image,
+          }}
+          style={styles.image}
+        />
+      </DoublePressable>
     );
   } else if (post.images) {
-    content = (<Carousel images={post.images} />)
+    content = (<Carousel images={post.images} onDoublePress={toggleLike} />)
+  }else if(post.video){
+    content = (
+      <DoublePressable onDoublePress={toggleLike}>
+        <VideoPlayer uri={post.video} paused={!isVisible} />
+      </DoublePressable>
+    )
   }
+
   return (
     <View style={styles.post}>
       {/* Header */}
@@ -51,7 +74,7 @@ const FeedPost = ({post}: IFeedPost) => {
           }}
           style={styles.userAvatar}
         />
-        <Text style={styles.userName}>{post.user.username}</Text>
+        <Text onPress={navigateToUser} style={styles.userName}>{post.user.username}</Text>
 
         <Entypo
           name="dots-three-horizontal"
@@ -61,9 +84,8 @@ const FeedPost = ({post}: IFeedPost) => {
       </View>
 
       {/* Content */}
-      <DoublePressable onDoublePress={toggleLike}>
+
         {content}
-      </DoublePressable>
 
       {/* Footer */}
       <View style={styles.footer}>
@@ -107,10 +129,11 @@ const FeedPost = ({post}: IFeedPost) => {
           <Text style={styles.bold}>{post.user.username}</Text>{' '}
           {post.description}
         </Text>
-        <Text onPress={toggleDescriptionExpanded}>{isDescriptionExpanded ? 'less' : 'more'}</Text>
-
+        <Text onPress={toggleDescriptionExpanded}>
+          {isDescriptionExpanded ? 'less' : 'more'}
+        </Text>
         {/* Comment */}
-        <Text>View all {post.nofComments} comments</Text>
+        <Text onPress={navigateToComments}>View all {post.nofComments} comments</Text>
         {post.comments.map(comment => (
           <Comment key={comment.id} comment={comment} />
         ))}

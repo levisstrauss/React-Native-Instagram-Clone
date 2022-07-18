@@ -1,19 +1,14 @@
 import {StyleSheet, View} from 'react-native';
-import HomeScreen from './src/screens/HomeScreen/HomeScreen';
+import Navigation from "./src/navigation";
 
 const App = () => {
   return (
-    <View style={styles.app}>
-      <HomeScreen />
-    </View>
+
+        <Navigation />
+
   );
 };
 
-const styles = StyleSheet.create({
-  app: {
-    flex: 1,
-    marginTop: 35,
-  },
-});
+
 
 export default App;
